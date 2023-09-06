@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link href="../css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+    <div class="wrapper">
+          <div class="navegador">
+            <nav>
+                <ul>
+                    <img class="logo" src="../img/logo.png"/>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li class="li_desplegable">
+                        
+                        <a href="../actividades.html" class="tamano activo">Actividades</a>
+                        <div class="div_desplegable">
+                        <a href="../deportesaquaticos/deportes-de-agua.html" class="activo">Agua</a>
+                        <a href="../deportesmotor/deportesdemotor.html">Motor</a>
+                        <a href="../deporteterrestres/deportes-terrestres.html">Tierra y Montaña</a>
+                        <a href="../deportesaire/deportesdeaire.html">Aire</a>
+                        </div>
+                    
+                    </li>
+                    <li><a href="../ofertas.html">Ofertas</a></li>
+                    <li><a href="../contacto2.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header"><h1 class="titulo_actividades">Piragüismo</h1></div>
+        <div class="content1">
+            <div class="padregaleria">
+                <div class="galeria">
+                    <img src="../img/canoaspiragueismo.jpg" id="fotocambia5" alt="Piragua" />
+                </div>
+            </div>
+            <div class="texto">
+                <h2>IMPORTANTE! LLAMAR PARA CONOCER DISPONIBILIDAD</h2> 
+                <p>Aprende a leer la corriente y disfruta descendiendo el Río Júcar en embarcaciones de 1 y 2 plazas, por los diferentes pasos que te ofrece su caudal y admirando el espectacular paisaje. El piragüismo es una actividad recomendada tanto si vienes solo, con tus amigos o en pareja. Contamos con varios niveles de iniciación y aprendizaje, apto para todas las edades, con dificultad mínima.</p>
+                <div class="precio">
+                    <div>
+                        <p>Precio <br/>actividad</p>
+                    </div>
+                    <div class="alinear_precio">14.00</div>
+                    <div class="euros">€</div>
+                </div>
+                <form class="formulario" name="formulario1" metodo="post" action="procesar_datos.php">
+                     <div class="campo campoflex">
+                        <label for="numero">Nº de adultos:</label>
+                        <input type="number" name="numero" id="numero" min="1" max="800" step="1" required>    
+                     </div> 
+                     <div class="campo campoflex">
+                         <label for="numero">Nº de niños:</label>
+                         <input type="number" name="numero" id="numero2" min="1" max="800" step="1" required>
+                     </div>  
+                     <div class="campoflex">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" name="fecha" id="fecha" required>
+                    </div>
+                    <div class="campoflex1">
+                        <div>
+                             <input type="submit" value="Reservar"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+            <div>
+                <h2 class="titulo2">Piragüismo</h2>
+                <p class="tamano_linea2">Disfruta recorriendo el Río Júcar en embarcaciones de 1 y 2 plazas, por los diferentes pasos que te ofrece su caudal y admirando el espectacular paisaje. El piragüismo es una actividad recomendada tanto si vienes solo, con tus amigos o en pareja. Contamos con varios niveles de iniciación y aprendizaje, apto para todas las edades, con riesgo mínimo.<br></p>
+                <p class="tamano_linea"> <span>Horario:</span>A partir de las 11:00.</p>
+                <p class="tamano_linea"><span>Duracion:</span> 1hora - Transporte incluido hasta agotar plazas disponibles.</p>
+                <p class="tamano_linea"><span>Época recomendada:</span> Todo el año.</p>
+                <p class="tamano_linea"><span>Edades:</span> Actividad apta para todos los públicos a partir de 4 años. Recomendable saber nadar.</p>
+                <p class="tamano_linea"><span>Localización:</span> Tolosa, rio Jucar</p>
+            </div>
+         
+        
+        <footer>
+                <div class="contenedor_texto1_footer">
+                    <p>CALLE PRINCIPE DE VERGARA 68, 28006 MADRID <br/>
+                       Tlf: 917-288-530<br/>
+                       Deportes@multiaventura.com</p>
+                </div>
+                <div class="contenedor_texto2_footer">
+                    <p>Diseñado por Igor Lamarain <br/>
+                       bootcamp front end marzo 2022<br/>
+                </div>
+                
+                <div class="piedepagina">
+                    <a href="#" class="logos facebook"><img src="../img/logo_facebook.png" alt="Icono facebook"/>@Lamventura</a>
+                    <a href="#" class="logos"><img src="../img/logo_instagram.png" alt="Icono instagram"/>@Lamventura</a>
+                    <a href="#" class="logos"><img src="../img/twitter-logo.png" alt="Icono twiter"/>@Lamventura</a>
+                </div>  
+        </footer>  
+    </div>
+        
+<script>
+    var ninosNum;
+    var id_setinterval;
+    var adultosNum;
+    var cont=0;
+    var precioAdultos=0;
+    var precioNinos=0;
+    var nuevoPrecio=0;
+    
+    
+     function cambiar() {
+         cont++;
+ //        resto x mas 1 sale la siguiente
+         switch(cont % 4 +1){
+             case 1:
+             document.getElementById("fotocambia5").src="../img/canoaspiragueismo.jpg";
+             break;
+             case 2:
+             document.getElementById("fotocambia5").src="../img/piraguiesmo1.jpg";
+             break;
+             case 3:
+             document.getElementById("fotocambia5").src="../img/piraguiesmo2.jpg";
+             break;
+             case 4:
+             document.getElementById("fotocambia5").src="../img/piraguiesmo3.jpg";
+             break;
+         }
+     }
+    
+    
+     function iniciar(){
+        id_setinterval=setInterval(cambiar, 3000); // Llamar a la funcion cada 3 segundos        
+     }
+     window.onload=iniciar;//cuando se cargue al documento se cargue la funcion
+   
+    var precio=parseInt(document.getElementsByClassName("alinear_precio")[0].innerHTML);
+    const preciobase=precio;
+    
+    
+    
+  
+   
+    var nuevoPrecio= document.getElementsByClassName("alinear_precio")[0];
+
+    
+    
+    
+    var prueba=document.getElementById("numero");
+    prueba.addEventListener("change",numeroAdultos);
+    
+    function numeroAdultos(){
+    adultosNum=parseInt(document.getElementById("numero").value);
+    // console.log(adultosNum);
+    precioAdultos=preciobase*adultosNum;
+    precio=precioAdultos+precioNinos;
+    nuevoPrecio.innerHTML=precio;
+    return precio;
+    
+    }
+   
+    var prueba2=document.getElementById("numero2");
+    prueba2.addEventListener("change",numeroNinos);
+    
+    function numeroNinos(){
+    ninosNum=parseInt(document.getElementById("numero2").value);
+    // alert("Hola")
+    precioNinos=preciobase*0.5*ninosNum;
+    precio=precioNinos+precioAdultos;
+    nuevoPrecio.innerHTML=precio;
+    }
+</script>  
+        
+	</body>
+</html>
