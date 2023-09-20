@@ -61,8 +61,49 @@ body{
     max-width: 90vw;
     margin: 0 auto;
 }
+/*Hamburguesa*/
+.clase_conmutador{
+    color: black;
+    display:none;
+    
+}
+
+
+@media  screen and (max-width:768px){
+    .navegador{
+        display:none;
+    }
+    .clase_conmutador{
+        display:block;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 50px 20px 0px;
+        font-size: 30px;
+
+      }
+      .navegador ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        display: none;
+      } 
+}
+.desplegado{
+    display:block;
+}
+
+/*Hamburguesa*/
+
+
+
 
 /*Navegador*/
+
+
+
+
 .logo{
     width: 8%;
 }
@@ -263,6 +304,10 @@ transform: scale(1.2);
 
 span{
     background-color: #f5a623;
+}
+
+.clase_conmutador{
+    background-color: #C42217;
 }
 
 .tamano_linea{
